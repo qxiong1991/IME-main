@@ -1,0 +1,29 @@
+1.百度网盘：
+sudo dpkg -i baidunetdisk_linux_x.x.x.deb
+卸载：sudo apt-get --purge remove baidunetdisk
+2.安装wine和微信：
+sudo apt-get install -f -y ./ukylin-wine_70.6.3.25_amd64.deb
+sudo apt-get install -f -y ./ukylin-wechat_3.0.0_amd64.deb
+a)执行以下命令卸载微信
+    sudo apt-get purge ukylin-wechat
+b)执行以下命令卸载wine
+     sudo apt-get purge ukylin-wine
+c)执行以下命令卸载依赖包
+    sudo apt-get autoremove
+d)删除缓存文件
+    rm -rf ~/.local/share/applications/wine*
+    rm -rf ~/.config/menus/applications-merged/wine*
+3.图形管理器切换
+sudo dpkg-reconfigure gdm3
+或
+sudo dpkg-reconfigure lightdm
+或
+sudo dpkg-reconfigure sddm
+
+sudo apt-get install lightdm
+sudo apt-get remove lightdm
+4.安装卸载wps
+安装
+sudo dpkg -i /home/qq/下载/wps-office_11.1.0.11664_amd64.deb
+卸载
+
